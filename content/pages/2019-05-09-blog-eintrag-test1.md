@@ -6,7 +6,6 @@ description: blog eintrag test1
 featuredpost: true
 featuredimage: /img/car-bg.png
 ---
-* sdfsdfdsf
-* ereraerert
-* w4rw323r
-* sdfwerw4rw
+sdfsdf werkjwhwer efdsf
+
+qewrkhqwe
