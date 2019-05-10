@@ -310,42 +310,6 @@ export const pageQuery = graphql`
         title
       }
     }
-    productsSection: allMarkdownRemark(
-      filter: { fields: { slug: { eq: "/tpv-products/" } } }
-    ) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            slogan
-            slogan_sub
-            abgebende_eltern {
-              heading
-              subheading
-            }
-          }
-        }
-      }
-    }
-    infoSections: allMarkdownRemark(
-      filter: { fields: { slug: { ne: "/tpv-products/" } } }
-    ) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
-        }
-      }
-    }
+    ...ApiQueriesFragment
   }
 `
