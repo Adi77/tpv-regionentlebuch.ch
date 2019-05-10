@@ -2,6 +2,7 @@
 templateKey: tpv-products-page
 slogan: Wir vermitteln  Kinderbetreuung für  Klein- und Schulkinder in  Tagesfamilien.
 slogan-sub: 'Stundenweise, mittags, halbtags und ganztags'
+product-claim: 'KINDER FÜHLEN SICH DORT ZU HAUSE, WO SIE SICH WOHL FÜHLEN.!'
 abgebende-eltern:
   abgebende-eltern-left-columns:
     - contents: >-
