@@ -6,7 +6,7 @@ product-claim: 'KINDER FÜHLEN SICH DORT ZU HAUSE, WO SIE SICH WOHL FÜHLEN.!'
 abgebende-eltern:
   abgebende-eltern-left-columns:
     - contents: >-
-        * einen [Betreuungsplatz](sbb.ch) in der Tagesfamilie, die Ihren
+        * einen [Betreuungsplatz](www.sbb.ch) in der Tagesfamilie, die Ihren
         Bedürfnissen entspricht
 
         * Begleitung und Beratung während des Betreuungsverhältnisses
