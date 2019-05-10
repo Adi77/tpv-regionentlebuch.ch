@@ -16,6 +16,13 @@ module.exports = {
         name: `blog`,
       },
     },
+        {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/pages`,
+        name: `seiten`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -68,12 +75,7 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-netlify-cms`
   ],
 }

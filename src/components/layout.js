@@ -1,77 +1,77 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
 
-import { rhythm, scale } from "../utils/typography"
+import Helmet from "react-helmet"
 
+import Footer from './Footer'
+import Navbar from './Navbar'
+
+import tpvlogo from '../../static/img/tpv-logo.svg'
+
+import kibesuisselogo from '../../static/img/kibesuisse-logo-white.png'
+
+
+//import 'bootstrap'
 import './main.scss'
 
-class Layout extends React.Component {
-  render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
 
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    }
-    return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <header>{header}</header>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+const TemplateWrapper = ({ children }) => {
+
+  return (
+    <React.Fragment>
+          <Helmet>
+
+          <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+
+
+      </Helmet>
+  <header class="logo-nav-top ">
+    <div>
+      <div>
+        <div>
+          <span class="organisation-logo">
+            <a id="tpv-logo-link" href="#page-top" alt="tpv logo" className="js-scroll-trigger">
+            <img className="tpvlogo" src={tpvlogo} alt="tpv" />
+            </a>
+          </span>
+          <span class="organisation-name">
+            tagesplatzvermittlung<br />
+            REGION ENTLEBUCH
+          </span>
+        </div>
+
+      <Navbar />
+
       </div>
-    )
-  }
+    </div>
+  </header>
+
+    <main role="main" >
+    <div class="ambient-img-fullwidth-claim">
+      <div>
+        <div>
+          <div>
+            <p>
+              Wir vermitteln <br />
+              Kinderbetreuung für <br />
+              Klein- und Schulkinder in <br />
+              Tagesfamilien.
+            </p>
+            <span>
+              Stundenweise, mittags, halbtags und ganztags
+            </span>
+            <img class="kibesuisse-logo" src={kibesuisselogo} alt="kibesuisse logo" />
+          </div>
+        </div>
+      </div>
+    </div>
+ {children}
+</main>
+
+     
+      <Footer />
+   </React.Fragment>
+  )
 }
 
-export default Layout
+export default TemplateWrapper

@@ -1,5 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+//const MiniCssExtractPlugin = require(`mini-css-extract-plugin`)
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -64,3 +65,36 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
+
+
+
+/*
+exports.onCreateWebpackConfig = ({
+  stage,
+  getConfig,
+  rules,
+  loaders,
+  actions
+}) => {
+  actions.setWebpackConfig({
+      mode: 'development',
+      devtool: 'inline-source-map',
+  module: {
+    rules: [
+{
+    test: /\.(scss)$/,
+    exclude: /node_modules/,
+     use: [
+      {
+        loader: 'sass-loader',
+        options: {
+          sourceMap: true,
+          outputStyle: 'compressed'
+        }
+      }
+    ]
+},
+    ]
+  },
+  });
+};*/

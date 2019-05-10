@@ -453,15 +453,6 @@ section {
       .navbar-collapse {
         position: absolute;
         right:0;
-        display: none;
-          opacity: 0;
-          transition: all 0.8s ease;
-  visibility: hidden;
-        &.is-active {
-          display:block;
-            opacity: 1;
-  visibility: visible;
-        }
         @include media-breakpoint-down(xs) {
           right:0;
         }
