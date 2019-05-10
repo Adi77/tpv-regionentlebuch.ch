@@ -33,5 +33,8 @@ tagesfamilien:
         * genügend Zeit und Platz
         * Verständnis, Geduld und Toleranz
       headline: 'Als Tagesfamilie haben Sie:'
+  tagesfamilien-right-columns:
+    - contents: test
+      headline: teest
 ---
 
