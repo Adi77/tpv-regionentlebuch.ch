@@ -7,9 +7,3 @@ featuredpost: true
 featuredimage: /img/car-bg.png
 ---
 sdfsdf werkjwhwer efdsf
-
-* qewrkhqwe
-* werwer
-* ertetr
-* hrtfg
-* egegr
