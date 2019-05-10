@@ -36,5 +36,7 @@ tagesfamilien:
   tagesfamilien-right-columns:
     - contents: test
       headline: teest
+    - contents: test2
+      headline: test2
 ---
 
