@@ -22,10 +22,10 @@ abgebende-eltern:
     - contents: Informationsblatt
       headline: Downloads
   heading: Abgebende Eltern
-  subtitle: Suchen Sie für Ihr Kind einen Betreuungsplatz in einer Tagesfamilie?
+  subheading: Suchen Sie für Ihr Kind einen Betreuungsplatz in einer Tagesfamilie?
 tagesfamilien:
   heading: Tagesfamilien
-  subtitle: Möchten Sie in Ihrer Familie Kinder betreuen?
+  subheading: Suchen Sie für Ihr Kind einen Betreuungsplatz in einer Tagesfamilie?
   tagesfamilien-left-columns:
     - contents: |-
         * Freude und Erfahrung im Umgang mit Kindern
