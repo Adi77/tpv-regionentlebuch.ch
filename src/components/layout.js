@@ -25,16 +25,16 @@ const TemplateWrapper = ({ children }) => {
 
 
       </Helmet>
-  <header class="logo-nav-top ">
+  <header className="logo-nav-top ">
     <div>
       <div>
         <div>
-          <span class="organisation-logo">
+          <span className="organisation-logo">
             <a id="tpv-logo-link" href="#page-top" alt="tpv logo" className="js-scroll-trigger">
             <img className="tpvlogo" src={tpvlogo} alt="tpv" />
             </a>
           </span>
-          <span class="organisation-name">
+          <span className="organisation-name">
             tagesplatzvermittlung<br />
             REGION ENTLEBUCH
           </span>
@@ -47,7 +47,7 @@ const TemplateWrapper = ({ children }) => {
   </header>
 
     <main role="main" >
-    <div class="ambient-img-fullwidth-claim">
+    <div className="ambient-img-fullwidth-claim">
       <div>
         <div>
           <div>
@@ -60,7 +60,7 @@ const TemplateWrapper = ({ children }) => {
             <span>
               Stundenweise, mittags, halbtags und ganztags
             </span>
-            <img class="kibesuisse-logo" src={kibesuisselogo} alt="kibesuisse logo" />
+            <img className="kibesuisse-logo" src={kibesuisselogo} alt="kibesuisse logo" />
           </div>
         </div>
       </div>

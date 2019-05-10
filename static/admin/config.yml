@@ -37,7 +37,7 @@ collections:
           - {label: Abgebende Eltern, name: abgebende-eltern, widget: object, 
               fields: [
                 {label: Überschrift, name: heading, widget: string}, 
-                {label: Untertitel, name: subtitle, widget: string}, 
+                {label: Untertitel, name: subheading, widget: string}, 
                 {label: Spalte links, name: abgebende-eltern-left-columns, widget: list, 
                 fields: [
                   {label: Überschrift, name: headline, widget: string}, 
@@ -55,7 +55,7 @@ collections:
           - {label: Tagesfamilien, name: tagesfamilien, widget: object, 
               fields: [
                 {label: Überschrift, name: heading, widget: string}, 
-                {label: Untertitel, name: subtitle, widget: string}, 
+                {label: Untertitel, name: subheading, widget: string}, 
                 {label: Spalte links, name: tagesfamilien-left-columns, widget: list, 
                 fields: [
                   {label: Überschrift, name: headline, widget: string}, 
