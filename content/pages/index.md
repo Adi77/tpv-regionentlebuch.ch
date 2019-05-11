@@ -10,6 +10,4 @@ description: >-
 featuredpost: true
 featuredimage: /img/github-icon.svg
 ---
-* sdfsdfs
-* werwegrsfs
-* xcvxc
+ererert
