@@ -16,6 +16,8 @@ abgebende-eltern:
         * die Regelung der Administration und des Inkassos
 
         * Hilfe bei Versicherungsfragen
+
+        * Testeintrag
       headline: 'Die Vermittlungsstelle bietet Ihnen:'
     - contents: Fachliche Unterstützung...
       headline: Unsere Leistungen im Detail
