@@ -2,19 +2,24 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import "jquery"
 import "bootstrap"
+import ReactMarkdown from "react-markdown";
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 export const TpvProductsTemplate = ({ productsSection }) => {
-  console.log(productsSection)
+  const cEAbgLeft = productsSection.abgebende_eltern.abgebende_eltern_left_columns
+  const cEAbgRight = productsSection.abgebende_eltern.abgebende_eltern_right_columns
+  const cETagLeft = productsSection.tagesfamilien.tagesfamilien_left_columns
+  const cETagRight = productsSection.tagesfamilien.tagesfamilien_right_columns
+console.log(cEAbgLeft);
   return (
     <React.Fragment>
       <section id="products" className="products">
         <div className="container">
           <div className="citation row">
             <div className="col-sm-12">
-              Kinder fühlen sich dort zu Hause, wo sie sich wohl fühlen.
+              {productsSection.product_claim}
             </div>
           </div>
 
@@ -33,9 +38,8 @@ export const TpvProductsTemplate = ({ productsSection }) => {
                   aria-controls="abgebende-eltern-content"
                   data-target="#abgebende-eltern-content"
                 >
-                  <div>Abgebende Eltern</div>
-                  Suchen Sie für Ihr Kind einen Betreuungsplatz in einer
-                  Tagesfamilie?
+                  <div>{productsSection.abgebende_eltern.heading}</div>
+                  {productsSection.abgebende_eltern.subheading}
                 </a>
               </div>
 
@@ -52,8 +56,8 @@ export const TpvProductsTemplate = ({ productsSection }) => {
                   aria-controls="tagesfamilien-content"
                   data-target="#tagesfamilien-content"
                 >
-                  <div>Tagesfamilien</div>
-                  Möchten Sie in Ihrer Familie Kinder betreuen?
+                  <div>{productsSection.tagesfamilien.heading}</div>
+                  {productsSection.tagesfamilien.subheading}
                 </a>
               </div>
             </div>
@@ -69,9 +73,8 @@ export const TpvProductsTemplate = ({ productsSection }) => {
                     aria-controls="abgebende-eltern-content"
                     data-target="#abgebende-eltern-content"
                   >
-                    <div>Abgebende Eltern</div>
-                    Suchen Sie für Ihr Kind einen Betreuungsplatz in einer
-                    Tagesfamilie?
+                    <div>{productsSection.abgebende_eltern.heading}</div>
+                    {productsSection.abgebende_eltern.subheading}
                   </a>
                 </div>
               </div>
@@ -84,6 +87,23 @@ export const TpvProductsTemplate = ({ productsSection }) => {
                 <div className="card card-body">
                   <div className="row">
                     <div className="col-md-12 col-lg-8">
+                      {cEAbgLeft && (
+                        <div >
+                          {cEAbgLeft.map((contentElement, index) => (
+                            <span key={index}>
+                              <h4>{contentElement.headline}</h4>
+
+
+<ReactMarkdown source={contentElement.contents} />
+
+
+
+
+                            </span>
+                          ))}
+                        </div>
+                      )}
+
                       <h4>Die Vermittlungsstelle bietet Ihnen:</h4>
                       <ul>
                         <li>
@@ -100,6 +120,7 @@ export const TpvProductsTemplate = ({ productsSection }) => {
                         </li>
                         <li>Hilfe bei Versicherungsfragen</li>
                       </ul>
+
                       <h4>Unsere Leistungen im Detail</h4>
 
                       <div id="tpv-accordion" className="tpv-accordion">

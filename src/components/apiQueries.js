@@ -14,6 +14,7 @@ import { graphql } from "gatsby";
           frontmatter {
             slogan
             slogan_sub
+            product_claim
             abgebende_eltern {
               heading
               subheading

@@ -34,6 +34,7 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tpv-products-page"}
           - {label: Slogan, name: slogan, widget: string}
           - {label: Slogan Untertitel, name: slogan-sub, widget: string}
+          - {label: Product Claim, name: product-claim, widget: string}
           - {label: Abgebende Eltern, name: abgebende-eltern, widget: object, 
               fields: [
                 {label: Überschrift, name: heading, widget: string}, 
