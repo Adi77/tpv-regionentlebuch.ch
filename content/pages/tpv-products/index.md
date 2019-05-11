@@ -18,6 +18,8 @@ abgebende-eltern:
         * Hilfe bei Versicherungsfragen
 
         * Testeintrag
+
+        * Testeintrag2
       headline: 'Die Vermittlungsstelle bietet Ihnen:'
     - contents: Fachliche Unterstützung...
       headline: Unsere Leistungen im Detail
