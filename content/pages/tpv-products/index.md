@@ -23,9 +23,7 @@ abgebende-eltern:
 
         * Testeintrag3
 
-        * egrerre
-
-        * tlksjsd
+        * Test judihui!
       headline: 'Die Vermittlungsstelle bietet Ihnen:'
     - contents: Fachliche Unterstützung...
       headline: Unsere Leistungen im Detail
