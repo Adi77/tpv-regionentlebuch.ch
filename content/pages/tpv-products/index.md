@@ -38,6 +38,7 @@ abgebende-eltern:
   abgebende-eltern-right-columns:
     - contents: Informationsblatt
       headline: Downloads
+  body: ffsdrwgeg
   heading: Abgebende Eltern
   subheading: Suchen Sie für Ihr Kind einen Betreuungsplatz in einer Tagesfamilie?
 tagesfamilien:
