@@ -22,6 +22,7 @@ collections:
       - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Body2", name: "body2", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
   - name: "tpv-pages"
@@ -42,8 +43,7 @@ collections:
                 {label: Spalte links, name: abgebende-eltern-left-columns, widget: list, 
                 fields: [
                   {label: Überschrift, name: headline, widget: string}, 
-                  {label: Inhalt, name: contents, widget: markdown},
-                  {label: Bodytest, name: body, widget: markdown}
+                  {label: Inhalt, name: contents, widget: markdown}
                   ]
                 },
                 {label: Spalte rechts, name: abgebende-eltern-right-columns, widget: list, 
