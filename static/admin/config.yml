@@ -43,7 +43,7 @@ collections:
                 fields: [
                   {label: Überschrift, name: headline, widget: string}, 
                   {label: Inhalt, name: contents, widget: markdown},
-                  {label: Body, name: body, widget: markdown}
+                  {label: Bodytest, name: body, widget: markdown}
                   ]
                 },
                 {label: Spalte rechts, name: abgebende-eltern-right-columns, widget: list, 
