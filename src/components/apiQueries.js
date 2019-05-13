@@ -7,6 +7,7 @@ import { graphql } from "gatsby";
     ) {
       edges {
         node {
+          htmlAst
           excerpt
           fields {
             slug
@@ -48,6 +49,7 @@ import { graphql } from "gatsby";
     ) {
       edges {
         node {
+          htmlAst
           excerpt
           fields {
             slug

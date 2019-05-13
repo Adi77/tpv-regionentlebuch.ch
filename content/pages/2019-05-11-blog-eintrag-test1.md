@@ -7,9 +7,3 @@ featuredpost: true
 featuredimage: /img/car-bg.png
 ---
 blog eintrag test1
-
-
-
-
-
-youtube 2dZtUbY-9QU

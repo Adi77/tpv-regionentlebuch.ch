@@ -1,18 +1,32 @@
 import React from "react"
+import PropTypes from 'prop-types'
 import { Link, graphql } from "gatsby"
 import "jquery"
 import "bootstrap"
 import ReactMarkdown from "react-markdown";
 
+import rehypeReact from "rehype-react"
+import RenderYoutubeEl from "../components/RenderYoutubeEl"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-export const TpvProductsTemplate = ({ productsSection }) => {
+export const TpvProductsTemplate = ({ productsSection, productsSectionAst }) => {
   const cEAbgLeft = productsSection.abgebende_eltern.abgebende_eltern_left_columns
-  const cEAbgRight = productsSection.abgebende_eltern.abgebende_eltern_right_columns
-  const cETagLeft = productsSection.tagesfamilien.tagesfamilien_left_columns
-  const cETagRight = productsSection.tagesfamilien.tagesfamilien_right_columns
-console.log(cEAbgLeft);
+  //const cEAbgRight = productsSection.abgebende_eltern.abgebende_eltern_right_columns
+  //const cETagLeft = productsSection.tagesfamilien.tagesfamilien_left_columns
+  //const cETagRight = productsSection.tagesfamilien.tagesfamilien_right_columns
+
+console.log(productsSection);
+
+const renderAst = new rehypeReact({
+  createElement: React.createElement,
+  components: { "render-youtube-element": RenderYoutubeEl},
+}).Compiler
+
+//console.log(productsSection);
+
+
   return (
     <React.Fragment>
       <section id="products" className="products">
@@ -87,17 +101,17 @@ console.log(cEAbgLeft);
                 <div className="card card-body">
                   <div className="row">
                     <div className="col-md-12 col-lg-8">
+
                       {cEAbgLeft && (
                         <div >
                           {cEAbgLeft.map((contentElement, index) => (
                             <span key={index}>
                               <h4>{contentElement.headline}</h4>
 
+{contentElement.contents}
+<ReactMarkdown source={contentElement.contents} ></ReactMarkdown>
 
-<ReactMarkdown source={contentElement.contents} />
-
-
-
+{renderAst(productsSectionAst)}
 
                             </span>
                           ))}
@@ -305,7 +319,7 @@ class TpvOnepage extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
 
-    const { frontmatter: productsSection } = data.productsSection.edges[0].node
+    const { frontmatter: productsSection, htmlAst: productsSectionAst } = data.productsSection.edges[0].node
     const infoSections = data.infoSections.edges
 
     return (
@@ -315,11 +329,20 @@ class TpvOnepage extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
 
-        <TpvProductsTemplate productsSection={productsSection} />
+        <TpvProductsTemplate productsSection={productsSection} productsSectionAst={productsSectionAst} />
         <TpvInfosTemplate infoSections={infoSections} />
       </Layout>
     )
   }
+}
+
+
+TpvOnepage.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
 }
 
 export default TpvOnepage
